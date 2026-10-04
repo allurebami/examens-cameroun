@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Bibliotheque d'epreuves et de corriges pour les eleves de 3e, Premiere et Terminale au Cameroun."
+    >
+    <title>Examens Cameroun | Epreuves et corriges</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#accueil" aria-label="Accueil Examens Cameroun">
+        <span class="brand-mark">EC</span>
+        <span>
+          <strong>Examens Cameroun</strong>
+          <small>Epreuves & corriges</small>
+        </span>
+      </a>
+
+      <nav class="top-nav" aria-label="Navigation principale">
+        <a href="#bibliotheque">Bibliotheque</a>
+        <a href="#packs">Packs</a>
+        <a href="#premium">Premium</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="accueil">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">3e · Premiere · Terminale</p>
+          <h1>La bibliotheque camerounaise des epreuves corrigees.</h1>
+          <p class="hero-text">
+            Trouve rapidement les anciens sujets et corriges par classe, serie,
+            matiere et annee. Les epreuves gratuites attirent les eleves, les
+            corriges detailles deviennent l'offre premium.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#bibliotheque">Explorer les epreuves</a>
+            <a class="button secondary" id="heroWhatsapp" href="#" target="_blank" rel="noreferrer">
+              Demander un corrige
+            </a>
+          </div>
+        </div>
+
+        <form class="search-panel" id="quickSearch" aria-label="Recherche rapide">
+          <h2>Recherche rapide</h2>
+          <label>
+            Classe
+            <select id="classFilter">
+              <option value="all">Toutes les classes</option>
+              <option value="3e">3e BEPC</option>
+              <option value="Premiere">Premiere Probatoire</option>
+              <option value="Terminale">Terminale Bac</option>
+            </select>
+          </label>
+
+          <label>
+            Serie
+            <select id="seriesFilter">
+              <option value="all">Toutes les series</option>
+              <option value="General">General</option>
+              <option value="A">Serie A</option>
+              <option value="C">Serie C</option>
+              <option value="D">Serie D</option>
+              <option value="ESG">Serie ESG</option>
+            </select>
+          </label>
+
+          <label>
+            Matiere
+            <input id="subjectFilter" type="search" placeholder="Ex: mathematiques">
+          </label>
+
+          <button class="button primary full" type="submit">Voir les resultats</button>
+        </form>
+      </section>
+
+      <section class="metrics" aria-label="Indicateurs de lancement">
+        <article>
+          <strong>3</strong>
+          <span>niveaux prioritaires</span>
+        </article>
+        <article>
+          <strong>4</strong>
+          <span>series a structurer</span>
+        </article>
+        <article>
+          <strong>500 FCFA+</strong>
+          <span>prix possible par corrige</span>
+        </article>
+        <article>
+          <strong>V0</strong>
+          <span>prete pour GitHub + Vercel</span>
+        </article>
+      </section>
+
+      <section class="section" id="bibliotheque">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Bibliotheque</p>
+            <h2>Classe → serie → matiere → annee.</h2>
+          </div>
+          <p>
+            Cette V0 est deja organisee comme une vraie plateforme. Il suffit
+            ensuite d'ajouter tes PDF Google Drive dans le fichier de donnees.
+          </p>
+        </div>
+
+        <div class="level-tabs" role="tablist" aria-label="Classes">
+          <button class="tab active" type="button" data-level="all">Tout</button>
+          <button class="tab" type="button" data-level="3e">3e BEPC</button>
+          <button class="tab" type="button" data-level="Premiere">Premiere</button>
+          <button class="tab" type="button" data-level="Terminale">Terminale</button>
+        </div>
+
+        <div class="library-layout">
+          <aside class="side-filter" aria-label="Filtres secondaires">
+            <h3>Filtres</h3>
+            <button type="button" data-series="all" class="filter-pill active">Toutes</button>
+            <button type="button" data-series="General" class="filter-pill">General</button>
+            <button type="button" data-series="A" class="filter-pill">Serie A</button>
+            <button type="button" data-series="C" class="filter-pill">Serie C</button>
+            <button type="button" data-series="D" class="filter-pill">Serie D</button>
+            <button type="button" data-series="ESG" class="filter-pill">Serie ESG</button>
+          </aside>
+
+          <div class="documents">
+            <div class="documents-toolbar">
+              <h3 id="resultTitle">Toutes les epreuves</h3>
+              <span id="resultCount">0 document</span>
+            </div>
+            <div class="document-list" id="documentList" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="packs">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Offres</p>
+            <h2>Des packs simples a vendre.</h2>
+          </div>
+          <p>
+            La V0 peut commencer avec paiement manuel par Mobile Money ou Orange
+            Money, puis envoi du pack par WhatsApp.
+          </p>
+        </div>
+
+        <div class="pack-grid">
+          <article class="pack">
+            <span>Pack decouverte</span>
+            <h3>1 corrige detaille</h3>
+            <p>Pour tester la qualite du contenu avant d'acheter un pack complet.</p>
+            <strong>500 - 1 000 FCFA</strong>
+            <a class="button secondary" id="singleCorrection" href="#" target="_blank" rel="noreferrer">
+              Demander
+            </a>
+          </article>
+
+          <article class="pack featured">
+            <span>Pack classe</span>
+            <h3>3e, Premiere ou Terminale</h3>
+            <p>Epreuves + corriges detailles pour une classe ou une serie.</p>
+            <strong>5 000 - 10 000 FCFA</strong>
+            <a class="button primary" id="classPack" href="#" target="_blank" rel="noreferrer">
+              Je veux ce pack
+            </a>
+          </article>
+
+          <article class="pack">
+            <span>Pack examen</span>
+            <h3>Preparation intensive</h3>
+            <p>Selection des meilleurs sujets avec corriges et methodes de reponse.</p>
+            <strong>10 000 - 25 000 FCFA</strong>
+            <a class="button secondary" id="examPack" href="#" target="_blank" rel="noreferrer">
+              Reserver
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="premium" id="premium">
+        <div>
+          <p class="eyebrow">Strategie premium</p>
+          <h2>Les epreuves attirent. Les corriges detailles monetisent.</h2>
+          <p>
+            Publie les sujets gratuitement pour creer le trafic. Reserve les
+            corriges detailles, les methodes, les astuces et les packs complets
+            aux eleves qui paient.
+          </p>
+        </div>
+        <ul>
+          <li>Epreuves gratuites pour le referencement.</li>
+          <li>Quelques corriges gratuits pour prouver la qualite.</li>
+          <li>Packs premium par classe, serie ou matiere.</li>
+          <li>Demande de corrige manquant via WhatsApp.</li>
+        </ul>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Recevoir un pack ou demander une epreuve.</h2>
+          <p>
+            Remplace le numero WhatsApp dans <code>app.js</code>, ajoute tes
+            liens Google Drive, puis deploie le site sur Vercel.
+          </p>
+        </div>
+        <a class="button primary" id="contactWhatsapp" href="#" target="_blank" rel="noreferrer">
+          Contacter sur WhatsApp
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Examens Cameroun · V0 epreuves et corriges</p>
+      <a href="#accueil">Retour en haut</a>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
